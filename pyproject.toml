@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prudencia-ml-certification"
+version = "0.1.0"
+description = "Démonstrateur pédagogique d'un pipeline de classification du risque AI Act."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "joblib>=1.4,<2",
+    "matplotlib>=3.9,<4",
+    "numpy>=2.0,<3",
+    "pandas>=2.2,<3",
+    "scikit-learn>=1.5,<2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3,<9",
+    "ruff>=0.6,<1",
+]
+notebooks = [
+    "jupyterlab>=4.2,<5",
+]
+
+[tool.setuptools]
+packages = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
