@@ -58,6 +58,24 @@ pytest
 ruff check .
 ```
 
+## Documentation niveau 2
+
+Le niveau 2 cible une architecture Python professionnelle pilotée par un
+`main.py` unique, sans FastAPI ni Streamlit. Les documents suivants décrivent
+la cible et son chemin de mise en œuvre ; le code actuel reste le socle niveau 1
+tant que la migration n'est pas réalisée.
+
+- [Architecture cible](docs/ARCHITECTURE_LEVEL_2.md) : composants,
+  responsabilités, arborescence et contrats ;
+- [Pipeline ML](docs/ML_PIPELINE.md) : flux des données, entraînement,
+  évaluation, inférence et prévention des fuites ;
+- [Guide pas à pas](docs/STEP_BY_STEP_GUIDE.md) : préparation, commandes,
+  contrôles et checklist de livraison ;
+- [Rapport d'entraînement](docs/TRAINING_REPORT.md) : gabarit traçable, sans
+  métrique inventée ;
+- [Standards de code et de documentation](docs/CODE_DOCUMENTATION_STANDARDS.md) :
+  docstrings, commentaires pédagogiques, tests et journalisation.
+
 ## Organisation
 
 - `src/preprocessing.py` : nettoyage structurel du CSV ;
@@ -67,4 +85,3 @@ ruff check .
 - `src/config.py` : chemins et paramètres ;
 - `tests/` : tests unitaires et test de bout en bout ;
 - `notebooks/` : notebooks pédagogiques à compléter avec le dataset retenu.
-
